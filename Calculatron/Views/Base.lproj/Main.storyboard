@@ -87,7 +87,7 @@
                                     <constraint firstAttribute="width" constant="75" id="3Xp-j0-RmR"/>
                                     <constraint firstAttribute="height" constant="75" id="buv-Fu-sHZ"/>
                                 </constraints>
-                                <state key="normal" title="x">
+                                <state key="normal" title="*">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -190,6 +190,9 @@
                                 <state key="normal" title="=">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="operatorPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmm-0j-U1b"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT9-D9-oTz">
                                 <rect key="frame" x="14" y="487" width="153.33333333333334" height="75"/>
@@ -221,7 +224,7 @@
                                     <constraint firstAttribute="width" constant="75" id="AcK-EK-GuR"/>
                                     <constraint firstAttribute="height" constant="75" id="LMT-ba-eh9"/>
                                 </constraints>
-                                <state key="normal" title="÷">
+                                <state key="normal" title="/">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -260,11 +263,11 @@
                                     <constraint firstAttribute="height" constant="25" id="nI1-BB-f1z"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1cx-Cd-zuH" firstAttribute="leading" secondItem="3yO-tT-P3A" secondAttribute="trailing" constant="3" id="0GF-mr-FiY"/>
                             <constraint firstItem="kyw-3E-3fG" firstAttribute="leading" secondItem="FVe-RY-sTV" secondAttribute="trailing" constant="3" id="3lJ-uD-E85"/>
