@@ -11,9 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: Properties
-    
-  //  var isInteger: Bool
-    
+        
     /// Stores the value to be operated on.
     var value1: Double?
     
@@ -92,39 +90,39 @@ class ViewController: UIViewController {
             
             //  value1 is available, time to operate
             
+            var result: Double?
+            
             switch previouslySelectedOperator {
                 
             case "+":
-                let result = value1 + value2
-                self.value1 = result
-                self.resultsLabel.text = "\(result)"
+                result = value1 + value2
                 
             case "-":
-                let result = value1 - value2
-                self.value1 = result
-                self.resultsLabel.text = "\(result)"
+                result = value1 - value2
                 
             case "/":
-                let result = value1 / value2
-                self.value1 = result
-                self.resultsLabel.text = "\(result)"
+                result = value1 / value2
                 
             case "*":
-                let result = value1 * value2
-                self.value1 = result
-                self.resultsLabel.text = "\(result)"
+                result = value1 * value2
                 
-            case "%":
-                let result = Int(value1) % Int(value2)
-                self.value1 = Double(result)
-                self.resultsLabel.text = "\(result)"
+                /*
+                 case "%":
+                 result = Int(value1) % Int(value2)
+                 self.value1 = Double(result)
+                 self.resultsLabel.text = result.wholeNumber ? "\(Int(result))" : "\(result)"
+                 */
                 
             case "+/-":
-                let result = -value1
-                self.resultsLabel.text = "\(result)"
-            
+                result = -value1
+                
             default:
                 break
+            }
+            
+            if let result = result {
+                self.value1 = result
+                self.resultsLabel.text = result.wholeNumber ? "\(Int(result))" : "\(result)"
             }
             
             if operation == "=" {
@@ -136,10 +134,4 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-/*    func findInteger() {
-        let value = self.value1
-        if value?.truncatingRemainder(dividingBy: 1) == 0.0 {
-            self.isInteger = true}
-*/
 }
