@@ -134,10 +134,10 @@ class ViewController: UIViewController {
             case "-":
                 result = value1 - value2
                 
-            case "/":
+            case "÷":
                 result = value1 / value2
                 
-            case "*":
+            case "×":
                 result = value1 * value2
                 
             default:
