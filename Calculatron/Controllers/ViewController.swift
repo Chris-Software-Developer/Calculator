@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: Properties
-        
+    
     /// Stores the value to be operated on.
     var value1: Double?
     
@@ -25,6 +25,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultsLabel: UILabel!
     
     // MARK: - IBActions
+    
+    @IBAction func percentageButton(_ sender: UIButton) {
+        if let valueString = self.resultsLabel.text {
+            if let value = Double(valueString) {
+                let result = value * 0.01
+                self.resultsLabel.text = String(result)
+            }
+        }
+    }
+    
+    @IBAction func positiveNegativeButtonPressed(_ sender: UIButton) {
+        if let valueString = self.resultsLabel.text {
+            if let value = Double(valueString) {
+                let result = value * -1
+                self.resultsLabel.text = result.isWholeNumber ? "\(Int(result))" : "\(result)"
+            }
+        }
+    }
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
         
@@ -106,23 +124,13 @@ class ViewController: UIViewController {
             case "*":
                 result = value1 * value2
                 
-                /*
-                 case "%":
-                 result = Int(value1) % Int(value2)
-                 self.value1 = Double(result)
-                 self.resultsLabel.text = result.wholeNumber ? "\(Int(result))" : "\(result)"
-                 */
-                
-            case "+/-":
-                result = -value1
-                
             default:
                 break
             }
             
             if let result = result {
                 self.value1 = result
-                self.resultsLabel.text = result.wholeNumber ? "\(Int(result))" : "\(result)"
+                self.resultsLabel.text = result.isWholeNumber ? "\(Int(result))" : "\(result)"
             }
             
             if operation == "=" {

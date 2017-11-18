@@ -9,7 +9,7 @@
 import Foundation
 
 extension Double {
-    var wholeNumber: Bool {
+    var isWholeNumber: Bool {
         return self.truncatingRemainder(dividingBy: 1) == 0
     }
 }

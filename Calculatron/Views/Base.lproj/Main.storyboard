@@ -240,7 +240,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zxz-1L-CFk"/>
+                                    <action selector="percentageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kRz-qJ-1jq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKJ-fy-Fyk">
@@ -270,7 +270,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zMR-cl-bIv"/>
+                                    <action selector="positiveNegativeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cej-o4-0Mz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yO-tT-P3A">
