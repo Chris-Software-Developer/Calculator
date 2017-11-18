@@ -27,21 +27,29 @@ class ViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func percentageButton(_ sender: UIButton) {
-        if let valueString = self.resultsLabel.text {
-            if let value = Double(valueString) {
-                let result = value * 0.01
-                self.resultsLabel.text = String(result)
-            }
+        
+        guard
+            let valueString = self.resultsLabel.text,
+            let value = Double(valueString) else {
+                self.resultsLabel.text = "Error"
+                return
         }
+        
+        let result = value * 0.01
+        self.resultsLabel.text = String(result)
     }
     
     @IBAction func positiveNegativeButtonPressed(_ sender: UIButton) {
-        if let valueString = self.resultsLabel.text {
-            if let value = Double(valueString) {
-                let result = value * -1
-                self.resultsLabel.text = result.isWholeNumber ? "\(Int(result))" : "\(result)"
-            }
+        
+        guard
+            let valueString = self.resultsLabel.text,
+            let value = Double(valueString) else {
+                self.resultsLabel.text = "Error"
+                return
         }
+        
+        let result = value * -1
+        self.resultsLabel.text = result.isWholeNumber ? "\(Int(result))" : "\(result)"
     }
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
