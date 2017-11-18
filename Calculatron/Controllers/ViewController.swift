@@ -77,6 +77,14 @@ class ViewController: UIViewController {
         self.currentlySelectedOperator = nil
     }
     
+    // MARK: - View Lifecycle
+    
+    override func viewDidLoad() {
+        self.resultsLabel.numberOfLines = 1
+        self.resultsLabel.minimumScaleFactor = 0.3
+        self.resultsLabel.adjustsFontSizeToFitWidth = true
+    }
+    
     // MARK: - Convenience Methods
     
     func handleOperation(_ operation: String) {
