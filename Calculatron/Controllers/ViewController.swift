@@ -12,12 +12,8 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     
-    /// Stores the value to be operated on.
     var value1: Double?
-    
-    /// The last operator that was selected.
     var currentlySelectedOperator: String?
-    
     var operatorJustPressed = false
     
     // MARK: IBOutlets
@@ -91,24 +87,16 @@ class ViewController: UIViewController {
         
         self.operatorJustPressed = true
         
-        // Get the basic values you need.
-        
         guard
             let labelText = self.resultsLabel.text,
             let value = Double(labelText) else {
                 fatalError("Something went wrong while trying to retrieve these values. See if any of these are not being set correctly.")
         }
         
-        // Check if it's time to operate, or time to store.
-        
         if self.currentlySelectedOperator == nil && self.value1 == nil {
-            
-            // This is the first operation selected. Store the relevant values.
             
             self.value1 = value
             self.currentlySelectedOperator = operation
-            
-            // And get out of here so we can get the second value.
             
             return
             
@@ -121,8 +109,6 @@ class ViewController: UIViewController {
                 let previouslySelectedOperator = self.currentlySelectedOperator else {
                     fatalError("Could not get values. Check to see if these are being accessed correctly.")
             }
-            
-            //  value1 is available, time to operate
             
             var result: Double?
             
